@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>HOTEL CHAMBORD | Tableau d'administration</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo_Hotel_Chambord-all.png" alt="Logo de l’Hôtel Chambord" class="logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+          </ul>
+          <a href="page_de_connexion.html" class="btn btn-outline-dark ms-3">
+            <i class="fa-solid fa-user"></i> Déconnexion
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container py-5" style="max-width: 1100px;">
+      <!-- Bandeau d'alerte -->
+      <section class="mb-4 mt-3">
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+          <i class="fa-solid fa-triangle-exclamation me-3"></i>
+          <div>
+            <strong>Zone réservée au personnel autorisé.</strong><br />
+            Ce tableau de bord donne accès à des pages d'administration qui ne doivent pas être consultées par les clients.
+          </div>
+        </div>
+      </section>
+
+      <!-- Titre -->
+      <header class="mb-4">
+        <h1 class="mb-2">Tableau d'administration</h1>
+        <p class="text-muted mb-0">
+          Utilisez ce panneau pour accéder rapidement aux différentes sections d'administration du site de l’Hôtel
+          Chambord.
+        </p>
+      </header>
+
+      <!-- Cartes d'administration -->
+      <section class="row g-4">
+        <!-- Gestion des utilisateurs et services -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <i class="fa-solid fa-users-gear fa-2x mb-2"></i>
+                <h2 class="h5 card-title mb-1">Gestion des utilisateurs</h2>
+                <p class="card-text text-muted small mb-0">
+                  Accéder à la gestion des comptes clients, administrateurs et aux services proposés par l’hôtel.
+                </p>
+              </div>
+              <div class="mt-auto text-end">
+                <a href="gestion_user_service.html" class="btn btn-dark btn-sm">
+                  Ouvrir <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Création d'offres d'emploi -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <i class="fa-solid fa-briefcase fa-2x mb-2"></i>
+                <h2 class="h5 card-title mb-1">Création d'offres d'emploi</h2>
+                <p class="card-text text-muted small mb-0">
+                  Ajouter, mettre à jour ou consulter les offres d'emploi proposées par l’Hôtel Chambord.
+                </p>
+              </div>
+              <div class="mt-auto text-end">
+                <a href="pages_creation_emploi.html" class="btn btn-dark btn-sm">
+                  Ouvrir <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Prévisualisation de la page 404 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <i class="fa-solid fa-circle-exclamation fa-2x mb-2"></i>
+                <h2 class="h5 card-title mb-1">Page 404 (erreurs)</h2>
+                <p class="card-text text-muted small mb-0">
+                  Prévisualiser la page d’erreur 404 utilisée lorsque les internautes accèdent à une page inexistante.
+                </p>
+              </div>
+              <div class="mt-auto text-end">
+                <a href="erreur404.html" class="btn btn-outline-dark btn-sm">
+                  Prévisualiser <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone technique / futures sections -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <i class="fa-solid fa-screwdriver-wrench fa-2x mb-2"></i>
+                <h2 class="h5 card-title mb-1">Zone technique</h2>
+                <p class="card-text text-muted small mb-0">
+                  Espace réservé pour de futures fonctionnalités d’administration : gestion des réservations, rapports,
+                  statistiques, etc.
+                </p>
+              </div>
+              <div class="mt-auto text-end">
+                <button class="btn btn-outline-secondary btn-sm" type="button" disabled>
+                  Bientôt disponible
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retour au site public -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0">
+            <div class="card-body d-flex flex-column justify-content-center">
+              <p class="text-muted small mb-2">
+                Pour revenir à la partie publique du site, cliquez ci-dessous :
+              </p>
+              <a href="../index.html" class="btn btn-outline-dark btn-sm">
+                <i class="fa-solid fa-house me-1"></i> Retour au site public
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-5 shadow pt-5">
+      <div class="container d-flex justify-content-center reverse-order">
+        <!-- Liens utiles -->
+        <div class="col-md-4 my-5 ps-4">
+          <h2>Liens utiles</h2>
+          <ul class="list-unstyled">
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+            <li><a href="recrutement.html" class="text-dark text-decoration-none">Recrutement</a></li>
+            <li><a href="mentions-legales.html" class="text-dark text-decoration-none">Mentions légales</a></li>
+            <li>
+              <a href="politique-protection-donnees.html" class="text-dark text-decoration-none">
+                Protection des données
+              </a>
+            </li>
+            <li><a href="politique-cookies.html" class="text-dark text-decoration-none">Politique cookies</a></li>
+          </ul>
+
+          <h2>Suivez-nous</h2>
+          <div class="mt-3 d-flex">
+            <a href="https://www.facebook.com" class="btn btn-outline-dark me-2" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" class="btn btn-outline-dark me-2" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" class="btn btn-outline-dark me-2" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="col-md-7 my-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <form action="contact.php" method="post" style="max-width: 500px" class="mx-auto">
+                <h2 class="mb-3">Contactez-nous</h2>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control" name="nom" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Prénom</label>
+                    <input type="text" class="form-control" name="prenom" required />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="3" name="message" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark mt-3">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center py-3 mb-0 avertissement-text">
+        © Hôtel Chambord - Tous droits réservés
+      </p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

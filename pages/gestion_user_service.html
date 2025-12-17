@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>HOTEL CHAMBORD | Gestion des utilisateurs et services</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo_Hotel_Chambord-all.png" alt="Logo Hôtel Chambord" class="logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+
+          </ul>
+          <a href="page_de_connexion.html" class="btn btn-outline-dark ms-3">
+            <i class="fa-solid fa-user"></i> Connexion
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container py-5" style="max-width: 1100px;">
+      <header class="mb-4 mt-4">
+        <h1 class="mb-2">Gestion des utilisateurs et des services</h1>
+        <p class="text-muted">
+          Interface d’administration permettant de gérer les comptes clients, les services de l’hôtel et
+          les comptes administrateurs. Le backend viendra se connecter aux formulaires et aux listes ci-dessous.
+        </p>
+      </header>
+
+      <!-- Formulaire d'ajout / modification -->
+      <section class="mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h5 mb-3">
+              <i class="fa-solid fa-user-gear me-2"></i>Ajouter ou modifier un compte / service
+            </h2>
+
+            <form action="#" method="post" class="row g-3">
+              <!-- Champ caché pour l'ID de l'élément (client/service/admin) -->
+              <input type="hidden" name="id_element" value="" />
+
+              <div class="col-md-4">
+                <label for="type_element" class="form-label">Type</label>
+                <select id="type_element" name="type_element" class="form-select" required>
+                  <option value="" selected disabled>Choisir...</option>
+                  <option value="client">Compte client</option>
+                  <option value="service">Service</option>
+                  <option value="admin">Compte administrateur</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" id="nom" name="nom" class="form-control" required />
+              </div>
+
+              <div class="col-md-4">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" id="prenom" name="prenom" class="form-control" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="email" class="form-label">Adresse e-mail</label>
+                <input type="email" id="email" name="email" class="form-control" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="motdepasse" class="form-label">Mot de passe</label>
+                <input type="password" id="motdepasse" name="motdepasse" class="form-control" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="role" class="form-label">Rôle</label>
+                <select id="role" name="role" class="form-select">
+                  <option value="" selected disabled>Choisir...</option>
+                  <option value="client">Client</option>
+                  <option value="admin">Administrateur</option>
+                  <option value="reception">Réception</option>
+                  <option value="restaurant">Personnel restaurant</option>
+                  <option value="spa">Personnel spa</option>
+                  <option value="direction">Direction</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="nom_service" class="form-label">Nom du service</label>
+                <input
+                  type="text"
+                  id="nom_service"
+                  name="nom_service"
+                  class="form-control"
+                  placeholder="Ex : Spa, Restaurant, Réception..."
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="notes" class="form-label">Notes / Informations complémentaires</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Informations supplémentaires (horaires, droits, remarques...)"
+                ></textarea>
+              </div>
+
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-dark mt-3">
+                  <i class="fa-solid fa-floppy-disk me-1"></i> Enregistrer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Barre de recherche / tri -->
+      <section class="mb-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-6">
+                <label class="form-label" for="recherche">Rechercher</label>
+                <input
+                  type="search"
+                  id="recherche"
+                  class="form-control"
+                  placeholder="Rechercher par nom, prénom, email ou service..."
+                />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label" for="tri">Trier par</label>
+                <select id="tri" class="form-select">
+                  <option value="nom_asc">Nom (A → Z)</option>
+                  <option value="nom_desc">Nom (Z → A)</option>
+                  <option value="role">Rôle</option>
+                  <option value="service">Service</option>
+                </select>
+              </div>
+              <div class="col-md-3 text-md-end">
+                <button class="btn btn-outline-dark mt-3 mt-md-0" type="button">
+                  <i class="fa-solid fa-arrow-rotate-right me-1"></i> Réinitialiser
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Onglets listes -->
+      <section>
+        <ul class="nav nav-tabs mb-3" id="gestionTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="clients-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#clients"
+              type="button"
+              role="tab"
+            >
+              Clients
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="services-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#services"
+              type="button"
+              role="tab"
+            >
+              Services
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="admins-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#admins"
+              type="button"
+              role="tab"
+            >
+              Administrateurs
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- Liste des clients -->
+          <div class="tab-pane fade show active" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+            <div class="card shadow-sm">
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table mb-0 align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Rôle</th>
+                        <th class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Dupont</td>
+                        <td>Marie</td>
+                        <td>marie.dupont@example.com</td>
+                        <td>Client</td>
+                        <td class="text-end">
+                          <button class="btn btn-sm btn-outline-dark me-2" type="button">
+                            <i class="fa-solid fa-pen-to-square"></i> Modifier
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmSuppressionModal"
+                          >
+                            <i class="fa-solid fa-trash"></i> Supprimer
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Leroy</td>
+                        <td>Thomas</td>
+                        <td>thomas.leroy@example.com</td>
+                        <td>Client</td>
+                        <td class="text-end">
+                          <button class="btn btn-sm btn-outline-dark me-2" type="button">
+                            <i class="fa-solid fa-pen-to-square"></i> Modifier
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmSuppressionModal"
+                          >
+                            <i class="fa-solid fa-trash"></i> Supprimer
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- Lignes supplémentaires générées par le backend -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Liste des services -->
+          <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+            <div class="card shadow-sm">
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table mb-0 align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Restaurant gastronomique</td>
+                        <td>Service du dîner, carte saisonnière, accords mets et vins.</td>
+                        <td class="text-end">
+                          <button class="btn btn-sm btn-outline-dark me-2" type="button">
+                            <i class="fa-solid fa-pen-to-square"></i> Modifier
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmSuppressionModal"
+                          >
+                            <i class="fa-solid fa-trash"></i> Supprimer
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Spa & Bien-être</td>
+                        <td>Massages, soins du corps et accès au hammam.</td>
+                        <td class="text-end">
+                          <button class="btn btn-sm btn-outline-dark me-2" type="button">
+                            <i class="fa-solid fa-pen-to-square"></i> Modifier
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmSuppressionModal"
+                          >
+                            <i class="fa-solid fa-trash"></i> Supprimer
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- Lignes supplémentaires générées par le backend -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Liste des administrateurs -->
+          <div class="tab-pane fade" id="admins" role="tabpanel" aria-labelledby="admins-tab">
+            <div class="card shadow-sm">
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table mb-0 align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Rôle</th>
+                        <th class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Martin</td>
+                        <td>Claire</td>
+                        <td>claire.martin@example.com</td>
+                        <td>Administrateur</td>
+                        <td class="text-end">
+                          <button class="btn btn-sm btn-outline-dark me-2" type="button">
+                            <i class="fa-solid fa-pen-to-square"></i> Modifier
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmSuppressionModal"
+                          >
+                            <i class="fa-solid fa-trash"></i> Supprimer
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Rossi</td>
+                        <td>Antoine</td>
+                        <td>antoine.rossi@example.com</td>
+                        <td>Administrateur</td>
+                        <td class="text-end">
+                          <button class="btn btn-sm btn-outline-dark me-2" type="button">
+                            <i class="fa-solid fa-pen-to-square"></i> Modifier
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmSuppressionModal"
+                          >
+                            <i class="fa-solid fa-trash"></i> Supprimer
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- Lignes supplémentaires générées par le backend -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-3 text-muted small">
+          *Les données affichées sont des exemples. Elles seront remplacées par les informations réelles
+          provenant de la base de données.
+        </p>
+      </section>
+    </main>
+
+    <!-- MODAL de confirmation de suppression -->
+    <div
+      class="modal fade"
+      id="confirmSuppressionModal"
+      tabindex="-1"
+      aria-labelledby="confirmSuppressionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmSuppressionModalLabel">Confirmer la suppression</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            Êtes-vous sûr de vouloir supprimer cet élément ? Cette action est définitive.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Annuler
+            </button>
+            <button type="button" class="btn btn-danger">
+              Supprimer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-5 shadow pt-5">
+      <div class="container d-flex justify-content-center reverse-order">
+        <!-- Liens utiles -->
+        <div class="col-md-4 my-5 ps-4">
+          <h2>Liens utiles</h2>
+          <ul class="list-unstyled">
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+            <li><a href="recrutement.html" class="text-dark text-decoration-none">Recrutement</a></li>
+            <li><a href="mentions-legales.html" class="text-dark text-decoration-none">Mentions légales</a></li>
+            <li><a href="politique-protection-donnees.html" class="text-dark text-decoration-none">Protection des données</a></li>
+            <li><a href="politique-cookies.html" class="text-dark text-decoration-none">Politique cookies</a></li>
+          </ul>
+
+          <h2>Suivez-nous</h2>
+          <div class="mt-3 d-flex">
+            <a href="https://www.facebook.com" class="btn btn-outline-dark me-2" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" class="btn btn-outline-dark me-2" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" class="btn btn-outline-dark me-2" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="col-md-7 my-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <form action="contact.php" method="post" style="max-width: 500px" class="mx-auto">
+                <h2 class="mb-3">Contactez-nous</h2>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control" name="nom" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Prénom</label>
+                    <input type="text" class="form-control" name="prenom" required />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="3" name="message" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark mt-3">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center py-3 mb-0 avertissement-text">
+        © Hôtel Chambord - Tous droits réservés
+      </p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

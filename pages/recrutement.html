@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>HOTEL CHAMBORD | Recrutement</title>
+  </head>
+
+  <body>
+    <!-- Bandeau (design cohérent) -->
+    <header>
+      <div class="bandeau-bg"></div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../img/logo_Hotel_Chambord-all.png"
+            alt="Logo Hôtel Chambord"
+            class="logo"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Afficher le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Rechercher"
+              aria-label="Search"
+            />
+            <button class="search-item btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENU -->
+    <main class="container-fluid" style="max-width: 1000px">
+      <!-- INTRO -->
+      <section class="mt-5 pt-5">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1 class="my-4">Rejoignez l'équipe du Relais de Chambord</h1>
+            <p class="lead">
+              Découvrez nos offres d'emploi et envoyez une candidature spontanée.
+              Cette page est une démonstration et les formulaires ne déclenchent
+              aucune procédure réelle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFRES + FORMULAIRE -->
+      <section class="my-4">
+        <div class="row g-4">
+          <!-- OFFRES -->
+          <div class="col-md-6">
+            <h2 class="h4 mb-3">Nos postes disponibles</h2>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <h3 class="h5">Réceptionniste de nuit H/F</h3>
+                <p class="text-muted mb-1">CDI · Chambord (41)</p>
+                <p>
+                  Assurer l'accueil de nuit, gérer les arrivées tardives,
+                  garantir la tranquillité des clients.
+                </p>
+                <ul>
+                  <li>Sens du service</li>
+                  <li>Organisation</li>
+                  <li>Anglais apprécié</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <h3 class="h5">Serveur / Serveuse Restaurant H/F</h3>
+                <p class="text-muted mb-1">CDD saisonnier · Chambord (41)</p>
+                <p>
+                  Mise en place de la salle, service, conseils aux clients,
+                  participation à une expérience haut de gamme.
+                </p>
+                <ul>
+                  <li>Sourire & dynamisme</li>
+                  <li>Travail en équipe</li>
+                  <li>Rigueur</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <h3 class="h5">Employé·e d'étage H/F</h3>
+                <p class="text-muted mb-1">CDI · Chambord (41)</p>
+                <p>
+                  Entretien des chambres, gestion du linge, respect des standards
+                  du Relais de Chambord.
+                </p>
+                <ul>
+                  <li>Autonomie</li>
+                  <li>Discrétion</li>
+                  <li>Sens du détail</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMULAIRE -->
+          <div class="col-md-6">
+            <h2 class="h4 mb-3">Candidature spontanée</h2>
+
+            <form action="#" method="post" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nom</label>
+                <input type="text" class="form-control" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Prénom</label>
+                <input type="text" class="form-control" required />
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Adresse e-mail</label>
+                <input type="email" class="form-control" required />
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Poste souhaité</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Réceptionniste, serveuse, employé·e d'étage..."
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Présentez brièvement votre motivation."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Lien vers votre CV (optionnel)</label>
+                <input type="url" class="form-control" placeholder="https://..." />
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark w-100 fw-bold">
+                  Envoyer ma candidature (démo)
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4">
+      <p>
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.<br />
+        <em class="avertissement-text">
+          Attention ce site n'est pas à but commercial. Il est uniquement
+          destiné à des fins d'apprentissage.
+        </em>
+      </p>
+    </footer>
+
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

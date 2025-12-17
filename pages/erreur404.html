@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>HOTEL CHAMBORD | Page non trouvée</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo_Hotel_Chambord-all.png" alt="Logo Hôtel Chambord" class="logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse width-800" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="chambres.html">Chambres</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link" href="spa.html">Spa</a></li>
+            <li class="nav-item"><a class="nav-link" href="avis.html">Avis</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+
+          </ul>
+          <a href="page_de_connexion.html" class="btn btn-outline-dark ms-3">
+            <i class="fa-solid fa-user"></i> Connexion
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container d-flex flex-column justify-content-center align-items-center text-center py-5" style="min-height: 70vh;">
+      <div class="mb-4">
+        <h1 class="display-3 fw-bold">404</h1>
+        <p class="lead mb-0">Oups… la page que vous recherchez n’existe pas ou n’est plus disponible.</p>
+      </div>
+
+      <p class="mb-4 text-muted">
+        Il est possible que l’adresse ait été modifiée, ou que le lien soit incorrect.
+      </p>
+
+      <div class="d-flex flex-column flex-sm-row gap-3">
+        <a href="../index.html" class="btn btn-dark">
+          <i class="fa-solid fa-house me-2"></i> Retour à l’accueil
+        </a>
+        <a href="contact.html" class="btn btn-outline-dark">
+          <i class="fa-solid fa-envelope me-2"></i> Contacter l’hôtel
+        </a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-5 shadow pt-5">
+      <div class="container d-flex justify-content-center reverse-order">
+        <!-- Liens utiles -->
+        <div class="col-md-4 my-5 ps-4">
+          <h2>Liens utiles</h2>
+          <ul class="list-unstyled">
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+            <li><a href="recrutement.html" class="text-dark text-decoration-none">Recrutement</a></li>
+            <li><a href="mentions-legales.html" class="text-dark text-decoration-none">Mentions légales</a></li>
+            <li><a href="politique-protection-donnees.html" class="text-dark text-decoration-none">Protection des données</a></li>
+            <li><a href="politique-cookies.html" class="text-dark text-decoration-none">Politique cookies</a></li>
+          </ul>
+
+          <h2>Suivez-nous</h2>
+          <div class="mt-3 d-flex">
+            <a href="https://www.facebook.com" class="btn btn-outline-dark me-2" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" class="btn btn-outline-dark me-2" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" class="btn btn-outline-dark me-2" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="col-md-7 my-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <form action="contact.php" method="post" style="max-width: 500px" class="mx-auto">
+                <h2 class="mb-3">Contactez-nous</h2>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control" name="nom" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Prénom</label>
+                    <input type="text" class="form-control" name="prenom" required />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="3" name="message" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark mt-3">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center py-3 mb-0 avertissement-text">
+        © Hôtel Chambord - Tous droits réservés
+      </p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

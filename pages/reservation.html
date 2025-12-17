@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>HOTEL CHAMBORD | Réservations</title>
+  </head>
+  <body>
+    <!-- Header avec le logo et le menu de navigation -->
+    <header>
+      <div class="bandeau-bg-checkin"></div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../img/logo_Hotel_Chambord-all.png"
+            alt="Logo Hôtel Chambord"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Afficher le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse width-800"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="chambres.html">Chambres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="restaurant.html">Restaurant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="spa.html">Spa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="avis.html">Avis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+
+          </ul>
+          <form class="d-flex" role="search" method="get">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Rechercher"
+              aria-label="Search"
+            />
+            <button class="search-item btn" type="submit" aria-label="Rechercher">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid" style="max-width: 1000px">
+      <!-- Intro -->
+      <section class="mt-5 pt-5">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1 class="my-4">Réserver votre expérience</h1>
+            <p class="lead">
+              Chambres, restaurant ou soins au SPA : utilisez ces formulaires
+              pour préparer votre séjour au Relais de Chambord.
+              Les formulaires sont à titre de démonstration et ne déclenchent
+              aucune réservation réelle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Onglets -->
+      <section class="my-4">
+        <ul class="nav nav-tabs" id="reservationTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="chambre-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#chambre"
+              type="button"
+              role="tab"
+              aria-controls="chambre"
+              aria-selected="true"
+            >
+              Chambre
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="restaurant-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#restaurant"
+              type="button"
+              role="tab"
+              aria-controls="restaurant"
+              aria-selected="false"
+            >
+              Restaurant
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="spa-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#spa"
+              type="button"
+              role="tab"
+              aria-controls="spa"
+              aria-selected="false"
+            >
+              Spa
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content py-4" id="reservationTabsContent">
+          <!-- Formulaire chambre -->
+          <div
+            class="tab-pane fade show active"
+            id="chambre"
+            role="tabpanel"
+            aria-labelledby="chambre-tab"
+          >
+            <h2 class="h4 mb-3">Réservation de chambre</h2>
+            <form class="row g-3" action="#" method="post">
+              <div class="col-md-6">
+                <label for="categorie-reservation" class="form-label"
+                  >Catégorie de réservation</label
+                >
+                <select
+                  id="categorie-reservation"
+                  name="categorie-reservation"
+                  class="form-select"
+                  required
+                >
+                  <option value="">Sélectionnez</option>
+                  <option>Chambre</option>
+                  <option>Restaurant</option>
+                  <option>Spa</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="type-chambre" class="form-label"
+                  >Type de chambre</label
+                >
+                <select id="type-chambre" name="type-chambre" class="form-select" required>
+                  <option value="">Sélectionnez une chambre</option>
+                  <option>Cosy</option>
+                  <option>Cosy vue rivière</option>
+                  <option>De luxe vue château</option>
+                  <option>Suite vue château</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="date-arrivee" class="form-label">Date d'arrivée</label>
+                <input
+                  type="date"
+                  id="date-arrivee"
+                  name="date-arrivee"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="date-depart" class="form-label">Date de départ</label>
+                <input
+                  type="date"
+                  id="date-depart"
+                  name="date-depart"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="nb-adultes" class="form-label">Adultes</label>
+                <input
+                  type="number"
+                  id="nb-adultes"
+                  name="nb-adultes"
+                  class="form-control"
+                  min="1"
+                  value="2"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="nb-enfants" class="form-label">Enfants</label>
+                <input
+                  type="number"
+                  id="nb-enfants"
+                  name="nb-enfants"
+                  class="form-control"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="col-12">
+                <label for="commentaires-chambre" class="form-label"
+                  >Demandes particulières</label
+                >
+                <textarea
+                  id="commentaires-chambre"
+                  name="commentaires-chambre"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Vue préférée, besoin de lit bébé, allergies, etc."
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark fw-bold">
+                  Simuler ma réservation de chambre
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Formulaire restaurant -->
+          <div
+            class="tab-pane fade"
+            id="restaurant"
+            role="tabpanel"
+            aria-labelledby="restaurant-tab"
+          >
+            <h2 class="h4 mb-3">Réserver une table au restaurant</h2>
+            <form class="row g-3" action="#" method="post">
+              <div class="col-md-4">
+                <label for="date-repas" class="form-label">Date</label>
+                <input
+                  type="date"
+                  id="date-repas"
+                  name="date-repas"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="heure-repas" class="form-label">Heure</label>
+                <input
+                  type="time"
+                  id="heure-repas"
+                  name="heure-repas"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="nb-couverts" class="form-label">Nombre de couverts</label>
+                <input
+                  type="number"
+                  id="nb-couverts"
+                  name="nb-couverts"
+                  class="form-control"
+                  min="1"
+                  value="2"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="type-repas" class="form-label">Type de repas</label>
+                <select id="type-repas" name="type-repas" class="form-select" required>
+                  <option value="">Sélectionnez</option>
+                  <option>Déjeuner</option>
+                  <option>Dîner</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="allergies-repas" class="form-label"
+                  >Allergies / régime particulier</label
+                >
+                <input
+                  type="text"
+                  id="allergies-repas"
+                  name="allergies-repas"
+                  class="form-control"
+                  placeholder="Sans gluten, végétarien, etc."
+                />
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark fw-bold">
+                  Simuler ma réservation au restaurant
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Formulaire spa -->
+          <div
+            class="tab-pane fade"
+            id="spa"
+            role="tabpanel"
+            aria-labelledby="spa-tab"
+          >
+            <h2 class="h4 mb-3">Réserver un soin au Spa</h2>
+            <form class="row g-3" action="#" method="post">
+              <div class="col-md-6">
+                <label for="type-soin" class="form-label">Type de soin</label>
+                <select id="type-soin" name="type-soin" class="form-select" required>
+                  <option value="">Sélectionnez un soin</option>
+                  <option>Massage relaxant</option>
+                  <option>Massage en duo</option>
+                  <option>Soin visage</option>
+                  <option>Accès spa & piscine</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="date-spa" class="form-label">Date</label>
+                <input
+                  type="date"
+                  id="date-spa"
+                  name="date-spa"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="heure-spa" class="form-label">Heure</label>
+                <input
+                  type="time"
+                  id="heure-spa"
+                  name="heure-spa"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="nb-personnes-spa" class="form-label">Personnes</label>
+                <input
+                  type="number"
+                  id="nb-personnes-spa"
+                  name="nb-personnes-spa"
+                  class="form-control"
+                  min="1"
+                  value="1"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="commentaires-spa" class="form-label"
+                  >Précisions</label
+                >
+                <textarea
+                  id="commentaires-spa"
+                  name="commentaires-spa"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Préférences de praticien, zones à éviter, etc."
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark fw-bold">
+                  Simuler ma réservation au Spa
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-4">
+      <p>
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text">
+          Attention ce site n'est pas à but commercial. Il est uniquement
+          destiné à des fins d'apprentissage.
+        </em>
+      </p>
+    </footer>
+
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
